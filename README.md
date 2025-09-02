@@ -99,7 +99,8 @@ Users can run `3.Software\compare.py` with the following settings:
 - Set `MODE = "offline"`
 - Set `OFFLINE_FILE_PATH = "3.Software/Data/keystroke_injection/injection1.txt"`
 
-The txt file records the actual keystroke injection effects, representing the per-key injection results and injection timing. For example:
+**It should be noted that since the actual keystroke injection effect requires a Hall-effect keyboard as a carrier (i.e., attacking through the DualStrike device with a Hall-effect keyboard connected to a computer to print real injected keystrokes), and considering that users may not have access to a Hall-effect keyboard, we record the actual keystroke injection results and timestamps during real injection attacks here (specific implementation can refer to 5.Demo\Dualstrike Artifact Demo.mp4). We expect this replay to allow users to intuitively see DualStrike's injection accuracy and speed. We also recommend users watch the demo video to see the real-time output of our injected sequence. Ideally, users can reproduce the attack effects by configuring the same experimental setup: Hall-effect keyboard + DualStrike Hardware.**
+
 ```
 1, d, 13:41:05.052
 2, u, 13:41:05.058
@@ -117,7 +118,7 @@ The txt file records the actual keystroke injection effects, representing the pe
 597, ., 13:41:09.065
 
 ```
-After running `compare.py`, click the "play" button in the opened window to simulate the actual injection effects. You can observe that DualStrike can rapidly and accurately inject real-world sequence with 100% accuracy, which aligns with results in paper: Sec-VI.C(3) Real-world Sequence Injection. Readers can also refer to the demo video to show the real-time output of our injected sequence.
+After running `compare.py`, click the "play" button in the opened window to simulate the actual injection effects. You can observe that DualStrike can rapidly and accurately inject real-world sequence with 100% accuracy, which aligns with results in paper: Sec-VI.C(3) Real-world Sequence Injection.
 
 ### 2. Keystroke Eavesdropping
 
