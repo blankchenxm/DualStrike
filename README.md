@@ -17,7 +17,7 @@ Its core design includes:
 2. We propose a novel, unified attack framework that combines both eavesdropping and keystroke injection in a single system. By incorporating a calibration mechanism, DualStrike significantly enhances robustness, enabling reliable attacks even under real-world disturbances such as keyboard displacement.
 The demo video of DualStrike can be found in the link: https://sites.google.com/view/magkey-anonymous?usp=sharing
 
-![DualStrike Main PCB](https://raw.githubusercontent.com/AnonymousAE-NDSS2026/DualStrike/main/Imgs/DualStrike_pipeline.png)
+![DualStrike Main PCB](Figures/DualStrike_pipeline.png)
 
 ## Project Structure
 
@@ -48,7 +48,7 @@ We provide the hardware requirements and manufacturing details for the DualStrik
 
 Solder the electromagnets onto the main PCB, assemble it with the 3D-printed case, and solder the battery and boost converter to complete the attack device.
 
-![Complete Attack Device](figures/complete_attack_device.png)
+![Complete Attack Device](Figures/complete_attack_device.png)
 
 ### Program the Device
 
@@ -60,7 +60,7 @@ We use the PlatformIO framework to program the main PCB of the attack device acc
 2. **Flashing:**  
    Connect the Main PCB and the flashing board as shown in the figure below. The flashing board is connected to the Main PCB via an FPC line and the FPC connector on the Main PCB. Then, connect the flashing board to your computer via USB first.
 
-![Flashing Connection](Imgs/Flashing.png)
+![Flashing Connection](Figures/Flashing.png)
 
 Once connected, click the `PlatformIO: Upload` button at the bottom of the IDE to flash the firmware.
 
@@ -75,7 +75,7 @@ a. Prepare the attack device, the 3D-printed base, and the Hall-effect keyboard.
 b. Invert the attack device so that the main PCB rests on the table with the 3D-printed base facing upward.
 c. Place the Hall-effect keyboard on the base.
 
-![Experiment Setup](Imgs/setup.png)
+![Experiment Setup](Figures/setup.png)
 
 ### Run the DualStrike Pipeline
 

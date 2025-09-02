@@ -14,9 +14,9 @@ This directory contains the PCB design source files for DualStrike, including th
 
 We utilize Altium to design PCB boards. After the PCB is manufactured, we also provide an interactive HTML BOM file to facilitate the quick installation of components. Please refer to the BOM.html file.
 
-![Main PCB](../Imgs/Hack_Final.png)
+![Main PCB](../Figures/Hack_Final.png)
 
-![Main PCB Layout](../Imgs/Flash&Measurement.png)
+![Main PCB Layout](../Figures/Flash&Measurement.png)
 
 ## Hardware requirements
 The hardware setup requires various components during the design and fabrication process. 
