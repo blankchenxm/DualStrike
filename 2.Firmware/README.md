@@ -17,4 +17,4 @@ This directory contains the firmware design for DualStrike.
 The Arduino code uses the PlatformIO framework, which can be installed as an extension in common IDEs such as Visual Studio Code.  
 To flash the firmware, connect the `1.Hardawre/Flashing_Module` to the main PCB, then click the `PlatformIO: Upload` button at the bottom of the IDE.
 
-![Firmware Upload Guide](../Figures/upload.png)
+![Firmware Upload Guide](../figures/upload.png)
