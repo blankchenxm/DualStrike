@@ -1,5 +1,9 @@
 # DualStrike Demo Process Description
 
+The demo video can be found in Google Drive: https://drive.google.com/file/d/15OgPDFtdk6wf-M02PzsR57Wh9lShXVq7/view?usp=drive_link
+
+Youtube: https://www.youtube.com/watch?v=r7AymZUocAc
+
 ## Equipment Setup
 
 ### Hardware Requirements
