@@ -48,7 +48,7 @@ We provide the hardware requirements and manufacturing details for the DualStrik
 
 Solder the electromagnets onto the main PCB, assemble it with the 3D-printed case, and solder the battery and boost converter to complete the attack device.
 
-![Complete Attack Device](Imgs/complete_attack_device.png)
+![Complete Attack Device](figures/complete_attack_device.png)
 
 ### Program the Device
 
