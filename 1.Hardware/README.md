@@ -50,7 +50,7 @@ Murata LQG15HS2N2S02D | Inductor | 0402 | 1
 
 - Flashing Board
 
-The interactive HTML BOM file is provided in `\Hack_Final\Hack_Final.html`. 
+The interactive HTML BOM file is provided in `Hack_Final\Hack_Final.html`. 
 
 Component | Description | Package | Quantity
 --- | --- | --- | ---
