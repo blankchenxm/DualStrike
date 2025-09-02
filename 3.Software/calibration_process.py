@@ -39,12 +39,12 @@ AMPLITUDE_THRESHOLD = 1.5       # Amplitude threshold above baseline for valid p
 SLOPE_WINDOW_SIZE = 0.1         # Time window in seconds for slope calculation
 
 # Machine Learning Model Parameters
-MODEL_PATH = r'3.Software\wooting_keypress_model2.pth'  # Path to the trained classification model
+MODEL_PATH = r'3.Software/wooting_keypress_model2.pth'  # Path to the trained classification model
 
 # File Processing Parameters
-INPUT_CALIBRATION_CSV_PATH = r'3.Software\Data\calibration\calibration1.csv'  # Input CSV file for calibration
-INPUT_EAVESDROP_CSV_PATH = r'3.Software\Data\calibration\eavesdrop1.csv'
-RESULT_FILE_PATH = r'3.Software\Data\calibration\result1.txt'  # Input CSV file for eavesdropping
+INPUT_CALIBRATION_CSV_PATH = r'3.Software/Data/calibration/calibration1.csv'  # Input CSV file for calibration
+INPUT_EAVESDROP_CSV_PATH = r'3.Software/Data/calibration/eavesdrop1.csv'
+RESULT_FILE_PATH = r'3.Software/Data/calibration/result1.txt'  # Input CSV file for eavesdropping
 
 # Attack Parameters
 END_TO_END_ATTACK_TEXT = "sudo mkfs.ext /dev/sda"  # Base attack command 

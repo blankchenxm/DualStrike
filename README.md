@@ -95,7 +95,7 @@ To help users quickly get started with our DualStrike system, we've provided an 
 
 ### 1. Keystroke Injection
 
-Users can run `3.Software\compare.py` with the following settings:
+Users can run `3.Software/compare.py` with the following settings:
 - Set `MODE = "offline"`
 - Set `OFFLINE_FILE_PATH = "3.Software/Data/keystroke_injection/injection1.txt"`
 
@@ -122,11 +122,11 @@ After running `compare.py`, click the "play" button in the opened window to simu
 
 ### 2. Keystroke Eavesdropping
 
-Users first need to obtain 30 keystroke data samples for each key to train the eavesdropping model. Here we provide training data for the Wooting keyboard, located at `3.Software\Data\training_data`. We also provide the well-trained model at `3.Software\wooting_keypress_model2.pth` for verfication and further offline implementation.
+Users first need to obtain 30 keystroke data samples for each key to train the eavesdropping model. Here we provide training data for the Wooting keyboard, located at `3.Software/Data/training_data`. We also provide the well-trained model at `3.Software/wooting_keypress_model2.pth` for verfication and further offline implementation.
 
 To obtain the eavesdropping model, we follow the following steps:
 
-1) Users need to first run `train_extract.py` to extract valid keystroke information from all data in `3.Software\Data\training_data`, generating `3.Software\wooting_peak_data2.csv`. The output will be similar to:
+1) Users need to first run `train_extract.py` to extract valid keystroke information from all data in `3.Software/Data/training_data`, generating `3.Software/wooting_peak_data2.csv`. The output will be similar to:
 ```
 Key 'Shift': Sensor 5 has the maximum peaks (30)
 Key 'Space': Sensor 7 has the maximum peaks (30)
@@ -141,13 +141,13 @@ Key 'Z': Sensor 5 has the maximum peaks (31)
 ```
 This code uses SecV-A’s eavesdropping implementation to extract keystroke-related peaks from the recorded 8-channel magnetometer data, and prepares them for subsequent model training.
 
-Additionally, for each file in the training data, users can run `3.Software\segment_single_key.py` by specifying a `FILE_PATH = r'3.Software/Data/training_data/wooting_key_V.csv'`. This will generate peak detection visualizations similar to Fig.11 for each key, with output like:
+Additionally, for each file in the training data, users can run `3.Software/segment_single_key.py` by specifying a `FILE_PATH = r'3.Software/Data/training_data/wooting_key_V.csv'`. This will generate peak detection visualizations similar to Fig.11 for each key, with output like:
 
 ```
 Final detected peak count: 30 (from Sensor 6)
 ```
 
-2) With the generated peak data csv `3.Software\wooting_peak_data2.csv`, users can then run `3.Software\classify.py` to train the model. The output file will be the trained model `3.Software\wooting_keypress_model2.pth`.
+2) With the generated peak data csv `3.Software/wooting_peak_data2.csv`, users can then run `3.Software/classify.py` to train the model. The output file will be the trained model `3.Software/wooting_keypress_model2.pth`.
 
 During training, you will see output similar to:
 ```
@@ -171,7 +171,7 @@ Epoch [80/80]:
 ```
 It also generates accuracy curves and a confusion matrix. The eavesdropping model achieves a test accuracy of 99.11%, which is consistent with the results reported in Section VI.B of the paper (‘Our model achieves an accuracy of 99.41% and 99.54% on keyboards #1 and #6’).
 
-3) Users can then run `3.Software\offline_eavesdrop.py` to use the trained model for predictions on recorded keystroke data. For example, by setting `CSV_FILE_PATH = "3.Software/Data/keystroke_eavesdrop/eavesdrop1.csv"` and running the code, you will see output similar to:
+3) Users can then run `3.Software/offline_eavesdrop.py` to use the trained model for predictions on recorded keystroke data. For example, by setting `CSV_FILE_PATH = "3.Software/Data/keystroke_eavesdrop/eavesdrop1.csv"` and running the code, you will see output similar to:
 ```
 Key 1: T (probability: 1.00) time: 1.66-1.84s triggered sensors: 3
 Key 2: H (probability: 1.00) time: 2.70-2.92s triggered sensors: 2
@@ -190,12 +190,12 @@ This shows the prediction results for keystroke eavesdropping.
 
 ### 3. End-to-End Attack
 
-Next, we simulate displacement by moving the keyboard from an aligned state by dx=3cm and dy=2cm. The whole process can be simulated with `3.Software\calibration_process.py` code. Specifically, as we declared in Section VI.E, we first introduce keyboard misalignment, then we perform calibration to estimate the displacement parameters. After this, We then emulated victim behavior by entering a 8-digit password on the displaced keyboard. DualStrike can record and perform calibration to obtain real input sequence. In the end, a sudo command attack will be achieved by combining a sudo command and listened password. DualStrike will also perform calibration to ensure the accuracy of injection.
+Next, we simulate displacement by moving the keyboard from an aligned state by dx=3cm and dy=2cm. The whole process can be simulated with `3.Software/calibration_process.py` code. Specifically, as we declared in Section VI.E, we first introduce keyboard misalignment, then we perform calibration to estimate the displacement parameters. After this, We then emulated victim behavior by entering a 8-digit password on the displaced keyboard. DualStrike can record and perform calibration to obtain real input sequence. In the end, a sudo command attack will be achieved by combining a sudo command and listened password. DualStrike will also perform calibration to ensure the accuracy of injection.
 
 Detailed steps can be found in the follwing part:
 
 1) **Displacement Calibration**  
-We use a recorded file `3.Software\Data\calibration\calibration1.csv`, which record the sensor reading during calibration. Then run `3.Software\calibration_process.py` to get output similar to:
+We use a recorded file `3.Software/Data/calibration/calibration1.csv`, which record the sensor reading during calibration. Then run `3.Software/calibration_process.py` to get output similar to:
 ```
 Step 1: Running calibration to determine displacement parameters...
 .....
@@ -237,7 +237,7 @@ Analysis based on 6 key pairs
 This shows successful calculation of the current displacement.
 
 2) **Calibration of Eavesdropping Data**  
-We simulate user input on the displaced keyboard. DualStrike can calibrate the eavesdropped data to obtain the user's actual input keys. For example, we use `3.Software\generate_secrets.py` to generate a random 8-digit sequence "qrqebrhw" as a password, input it on the keyboard, and record the data as `3.Software\Data\calibration\eavesdrop1.csv`. We can see the code output of 2nd phase:
+We simulate user input on the displaced keyboard. DualStrike can calibrate the eavesdropped data to obtain the user's actual input keys. For example, we use `3.Software/generate_secrets.py` to generate a random 8-digit sequence "qrqebrhw" as a password, input it on the keyboard, and record the data as `3.Software/Data/calibration/eavesdrop1.csv`. We can see the code output of 2nd phase:
 ```
 Step 2: Processing eavesdrop data with calibration correction...
 

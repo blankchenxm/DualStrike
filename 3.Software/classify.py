@@ -37,8 +37,8 @@ FIGURE_SIZE_ACCURACY = (10, 6)   # Figure size for accuracy curves
 FIGURE_SIZE_CONFUSION = (15, 12) # Figure size for confusion matrix
 
 # Data file
-DATA_FILE = r'3.Software\wooting_peak_data2.csv'     # Input CSV file path
-MODEL_FILE = r'3.Software\wooting_keypress_model2.pth'  # Output model file path
+DATA_FILE = r'3.Software/wooting_peak_data2.csv'     # Input CSV file path
+MODEL_FILE = r'3.Software/wooting_keypress_model2.pth'  # Output model file path
 
 # ================================
 # DATASET CLASS DEFINITION
