@@ -1,0 +1,15 @@
+{
+    "name": "KeyAttacker",
+    "version": "1.0.0",
+    "description": "MCP23017 based keypress attack simulation library",
+    "keywords": "keypress, attack, MCP23017, i2c",
+    "authors": {
+        "name": "Magstick Team"
+    },
+    "dependencies": [
+        "Keypad",
+        "Wire"
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+} 

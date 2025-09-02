@@ -1,0 +1,11 @@
+{
+    "name": "DualStrike-Common",
+    "version": "1.0.0",
+    "description": "Common types and configuration for DualStrike Arduino system",
+    "keywords": "config, types, common",
+    "authors": {
+        "name": "Magstick Team"
+    },
+    "frameworks": "arduino",
+    "platforms": "*"
+} 

@@ -1,0 +1,14 @@
+{
+    "name": "KeyListener",
+    "version": "1.0.0",
+    "description": "Magnetic sensor based keypress listener and recognition library",
+    "keywords": "keypress, sensor, MLX90393, machine learning",
+    "authors": {
+        "name": "Magstick Team"
+    },
+    "dependencies": [
+        "adafruit/Adafruit MLX90393 Library"
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+} 

@@ -1,0 +1,24 @@
+{
+  "name": "Calibrator",
+  "version": "1.0.0",
+  "description": "Keyboard calibration library for magnetic field-based keypress detection",
+  "keywords": "calibration, keyboard, wls, transformation",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "authors": [
+    {
+      "name": "DualStrike",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "Types": "*"
+  },
+  "export": {
+    "include": "."
+  }
+} 
